@@ -1,4 +1,14 @@
-
+import { useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const { colors } = useContext(GlobalContext);
+  console.log(colors);
+  return <>
+  <div className="flex justify-end gap-5 py-5 w-full ">
+    {colors.map((color) => {
+      console.log(color);
+      return <button key={color} className="w-5 h-5 rounded-full cursor-pointer" style={{backgroundColor: color}}></button>;
+    })}
+    </div>
+    </>;
 }

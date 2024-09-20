@@ -4,7 +4,7 @@ export default function MainLayout() {
   return (
     <div>
         <Navbar/>
-        <main> 
+        <main className="align-container"> 
             <Outlet/>
         </main>
         <Footer/>
